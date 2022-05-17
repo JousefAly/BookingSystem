@@ -10,24 +10,24 @@ using System.Threading.Tasks;
 
 namespace BookingSystem_DAL.Repositories
 {
-    public class RoomRepository : IRepository<Room>
+    public class BranchRepository : IRepository<Branch>
     {
         private readonly AppDbContext _context;
 
-        public RoomRepository(AppDbContext context)
+        public BranchRepository(AppDbContext context)
         {
             _context = context;
         }
-        public Room Create(Room room)
+        public Branch Create(Branch branch)
         {
-            if (room == null)
+            if (branch == null)
                 return null;
             try
             {
-                _context.Add(room);
+                _context.Add(branch);
                 if (_context.SaveChanges() > 0)
                 {
-                    return room;
+                    return branch;
                 }
                 else
                 {
@@ -41,17 +41,17 @@ namespace BookingSystem_DAL.Repositories
             }
         }
 
-        public bool Delete(Room room)
+        public bool Delete(Branch branch)
         {
-            if (room == null)
+            if (branch == null)
             {
                 return false;
             }
             try
             {
-                _context.Remove(room);
+                _context.Remove(branch);
                 _context.SaveChanges();
-                if (_context.Rooms.Find(room.Id) == null)
+                if (_context.Branches.Find(branch.Id) == null)
                 {
                     return true;
                 }
@@ -66,27 +66,31 @@ namespace BookingSystem_DAL.Repositories
 
         }
 
-        public IEnumerable<Room> GetAll()
+        public IEnumerable<Branch> GetAll()
         {
-            return _context.Rooms.Include(r => r.Branch).ToArray();
+            return _context.Branches.ToArray();
+        }
+        public IEnumerable<Branch> GetAllWithRooms()
+        {
+            return _context.Branches.Include(b => b.Rooms).ToArray();
         }
 
-        public Room GetById(int id)
+        public Branch GetById(int id)
         {
-            return _context.Rooms.Include(r => r.Branch).FirstOrDefault(r => r.Id == id);
+            return _context.Branches.Include(b => b.Rooms).FirstOrDefault(b => b.Id == id);
         }
 
-        public Room Update(Room room)
+        public Branch Update(Branch branch)
         {
-            if (room == null)
+            if (branch == null)
             {
                 return null;
             }
             try
             {
-                _context.Update(room);
+                _context.Update(branch);
                 _context.SaveChanges();
-                return room;
+                return branch;
             }
             catch (Exception)
             {
