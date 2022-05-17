@@ -14,11 +14,7 @@ namespace BookingSystem_DAL.Data
         {
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder OptBuilder)
-        {
-            OptBuilder
-                .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=BookingDatabase;Trusted_Connection=True;MultipleActiveResultSets=true");
-        }
+       
 
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Branch> Branches { get; set; }
