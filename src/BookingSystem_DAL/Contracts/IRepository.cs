@@ -8,9 +8,9 @@ namespace BookingSystem_DAL.Contracts
 {
     public interface IRepository<T>
     {
-        public Task<T> Create(T _object);
-        public void Delete(T _object);
-        public void Update(T _object);
+        public T Create(T _object);
+        public bool Delete(T _object);
+        public T Update(T _object);
         public IEnumerable<T> GetAll();
         public T GetById(int id);
     }
