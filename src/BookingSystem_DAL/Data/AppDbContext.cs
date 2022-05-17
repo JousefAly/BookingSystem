@@ -14,11 +14,17 @@ namespace BookingSystem_DAL.Data
         {
         }
 
-       
+
 
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Branch> Branches { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BookedRoom>()
+                .HasKey(br => new { br.RoomId, br.BookingId });
+        }
     }
 }
