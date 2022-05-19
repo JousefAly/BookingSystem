@@ -167,6 +167,24 @@ namespace BookingSystem_DAL.Data
                     MaxPeople = 3,
                     BranchId = 2
                 });
+            // seed Guests
+            modelBuilder.Entity<Guest>()
+                .HasData(
+                new
+                {
+                    Id = 1,
+                    Name = "Yousef",
+                    PhoneNumber = "01112233444",
+                    SSN = "30001172511355"
+                },
+                new
+                {
+                    Id = 2,
+                    Name = "Aly",
+                    PhoneNumber = "01112255666",
+                    SSN = "30001172511477"
+                }
+                );
 
 
 
