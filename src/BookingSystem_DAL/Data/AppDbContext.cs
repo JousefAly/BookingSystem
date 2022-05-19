@@ -94,6 +94,78 @@ namespace BookingSystem_DAL.Data
                     Type = "Suite",
                     MaxPeople = 3,
                     BranchId = 1
+                },
+                new
+                {
+                    Id = 7,
+                    Name = "R7",
+                    Price = 500m,
+                    Type = "Suite",
+                    MaxPeople = 3,
+                    BranchId = 1
+                },
+                new
+                {
+                    Id = 1,
+                    Name = "R1",
+                    Price = 100m,
+                    Type = "Single",
+                    MaxPeople = 1,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 2,
+                    Name = "R2",
+                    Price = 100m,
+                    Type = "Single",
+                    MaxPeople = 1,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 3,
+                    Name = "R3",
+                    Price = 100m,
+                    Type = "Single",
+                    MaxPeople = 1,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 4,
+                    Name = "R4",
+                    Price = 200m,
+                    Type = "Double",
+                    MaxPeople = 2,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 5,
+                    Name = "R5",
+                    Price = 200m,
+                    Type = "Double",
+                    MaxPeople = 2,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 6,
+                    Name = "R6",
+                    Price = 500m,
+                    Type = "Suite",
+                    MaxPeople = 3,
+                    BranchId = 2
+                },
+                new
+                {
+                    Id = 7,
+                    Name = "R7",
+                    Price = 500m,
+                    Type = "Suite",
+                    MaxPeople = 3,
+                    BranchId = 2
                 });
 
 
