@@ -106,7 +106,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 1,
+                    Id = 8,
                     Name = "R1",
                     Price = 100m,
                     Type = "Single",
@@ -115,7 +115,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 2,
+                    Id = 9,
                     Name = "R2",
                     Price = 100m,
                     Type = "Single",
@@ -124,7 +124,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 3,
+                    Id = 10,
                     Name = "R3",
                     Price = 100m,
                     Type = "Single",
@@ -133,7 +133,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 4,
+                    Id = 11,
                     Name = "R4",
                     Price = 200m,
                     Type = "Double",
@@ -142,7 +142,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 5,
+                    Id = 12,
                     Name = "R5",
                     Price = 200m,
                     Type = "Double",
@@ -151,7 +151,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 6,
+                    Id = 13,
                     Name = "R6",
                     Price = 500m,
                     Type = "Suite",
@@ -160,7 +160,7 @@ namespace BookingSystem_DAL.Data
                 },
                 new
                 {
-                    Id = 7,
+                    Id = 14,
                     Name = "R7",
                     Price = 500m,
                     Type = "Suite",
